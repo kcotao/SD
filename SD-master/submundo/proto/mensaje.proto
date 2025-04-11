@@ -1,0 +1,17 @@
+// saludo.proto
+syntax = "proto3";
+
+option go_package = "grpc-server/proto";
+package saludo;
+
+service SaludoService {
+  rpc Saludar (SaludoRequest) returns (SaludoResponse);
+}
+
+message SaludoRequest {
+  string nombre = 1;
+}
+
+message SaludoResponse {
+  string mensaje = 1;
+}
